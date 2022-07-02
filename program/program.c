@@ -18,5 +18,3 @@ static GLuint createProgram(GLuint size, GLuint* shaders) {
 
     return program;
 }
-
-ProgramModuleType ProgramModule = { createProgram };

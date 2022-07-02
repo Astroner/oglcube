@@ -17,11 +17,14 @@ typedef struct Cube {
     } position;
 } Cube;
 
+static void initCube(Cube *self, GLfloat width);
+static void setPosition(Cube *self, GLfloat x, GLfloat y);
+
 typedef struct CubeModuleType {
     void(*initCube)(Cube* self, GLfloat width);
     void(*setPosition)(Cube* self, GLfloat x, GLfloat y, GLfloat z);
 } CubeModuleType;
 
-CubeModuleType CubeModule; 
+CubeModuleType CubeModule = { initCube, setPosition };
 
 #endif // CUBE

@@ -36,5 +36,3 @@ static void setPosition(Cube *self, GLfloat x, GLfloat y) {
     self->position.x = x;
     self->position.y = y;
 }
-
-CubeModuleType CubeModule = { initCube, setPosition };

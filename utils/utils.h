@@ -7,6 +7,8 @@ typedef struct UtilsModuleType {
     void* (*fileContent)(char *filename, GLint *length);
 } UtilsModuleType;
 
-UtilsModuleType UtilsModule;
+static void *fileContents(const char *filename, GLint *length);
+
+UtilsModuleType UtilsModule = { fileContents };
 
 #endif // UTILS

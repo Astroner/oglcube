@@ -22,5 +22,3 @@ static void *fileContents(const char *filename, GLint *length) {
 
     return buffer;
 }
-
-UtilsModuleType UtilsModule = { fileContents };

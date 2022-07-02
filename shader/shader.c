@@ -21,5 +21,3 @@ static GLuint createShader(GLenum type, char* filename) {
 
     return shader;
 }
-
-ShaderModuleType ShaderModule = { createShader };

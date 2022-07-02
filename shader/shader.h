@@ -3,10 +3,12 @@
 #if !defined(SHADER)
 #define SHADER
 
+static GLuint createShader(GLenum type, char* filename);
+
 typedef struct {
     GLuint (*createShader)(GLenum type, char *filename);
 } ShaderModuleType;
 
-ShaderModuleType ShaderModule;
+ShaderModuleType ShaderModule = { createShader };
 
 #endif // SHADER

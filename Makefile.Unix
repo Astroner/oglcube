@@ -1,5 +1,5 @@
-GLEW_INCLUDE = /opt/local/include
-GLEW_LIB = /opt/local/lib
+GL_INCLUDE = /usr/X11R6/include
+GL_LIB = /usr/X11R6/lib
 
 SOURCES = main.c cube/cube.c utils/utils.c shader/shader.c program/program.c
 
@@ -7,13 +7,13 @@ OBJECTS = $(SOURCES:.c=.o)
 EXECUTABLE = ./start
 
 build: $(OBJECTS)
-	gcc -o $(EXECUTABLE) $^ -framework GLUT -w -framework OpenGL -L$(GLEW_LIB) -lGLEW
+	gcc -o $(EXECUTABLE) $^ -L$(GL_LIB) -lGL -lglut -lGLEW -lm
 
 start: build
 	$(EXECUTABLE)
 
 .c.o:
-	gcc -c -o $@ $< -I$(GLEW_INCLUDE)
+	gcc -c -o $@ $< -I$(GL_INCLUDE)
 
 clean:
 	rm -f $(EXECUTABLE) $(OBJECTS)

@@ -1,0 +1,12 @@
+make --dry-run --keep-going --print-directory
+make: Entering directory `/Users/enikiforov/Desktop/CubeOpenGL'
+gcc -c -o main.o main.c -I/opt/local/include
+ 
+gcc -c -o cube/cube.o cube/cube.c -I/opt/local/include
+gcc -c -o utils/utils.o utils/utils.c -I/opt/local/include
+ 
+gcc -c -o shader/shader.o shader/shader.c -I/opt/local/include
+gcc -c -o program/program.o program/program.c -I/opt/local/include
+gcc -o ./start main.o cube/cube.o utils/utils.o shader/shader.o program/program.o -framework GLUT -w -framework OpenGL -L/opt/local/lib -lGLEW
+make: Leaving directory `/Users/enikiforov/Desktop/CubeOpenGL'
+ 

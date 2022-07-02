@@ -1,0 +1,8 @@
+{
+    "makefile.extensionOutputFolder": "./.vscode",
+    "files.associations": {
+        "*.css": "scss",
+        "cube.h": "c",
+        "glew.h": "c"
+    }
+}
